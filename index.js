@@ -10,18 +10,19 @@ require("dotenv").config({
   path: "./.env",
 });
 
-app.use(cors());
+app.use(
+  cors({
+    origin: "http://localhost:3000",
+    credentials: true,
+  })
+);
 app.use(express.json());
 
 app.get("/", (req, res) => {
   res.send("Hello world from socket server!");
 });
 
-if (process.env.NODE_ENV !== "PRODUCTION") {
-  require("dotenv").config({
-    path: "./.env",
-  });
-}
+
 
 let users = [];
 
