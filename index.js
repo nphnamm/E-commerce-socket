@@ -12,7 +12,7 @@ require("dotenv").config({
 
 app.use(
   cors({
-    origin: "http://localhost:3000",
+    origin: ["http://localhost:3000", "http://e-commerce-eight-beryl-94.vercel.appcom"],
     credentials: true,
   })
 );
