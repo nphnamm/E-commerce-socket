@@ -12,7 +12,13 @@ require("dotenv").config({
 
 app.use(
   cors({
-    origin: ["http://localhost:3000", "http://e-commerce-chi-olive-70.vercel.app"],
+    origin: [
+      "http://localhost:3000", 
+      "https://e-commerce-chi-olive-70.vercel.app",
+      "https://e-commerce-git-main-nguyn-phan-hoai-nams-projects.vercel.app/",
+      "https://e-commerce-l51377asc-nguyn-phan-hoai-nams-projects.vercel.app/"
+    
+    ],
     credentials: true,
   })
 );
